@@ -270,7 +270,7 @@ URL = "scss/adritian.scss"
 [params.colorTheme.auto]
   disable = true
 [params.colorTheme.forced]
-  theme = "dark"
+  theme = "light"
 
 ## the following parameter will disable theme override in the footer
 #  [params.colorTheme.selector.disable]
