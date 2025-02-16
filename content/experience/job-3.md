@@ -1,19 +1,23 @@
 ---
-date: 2024-12-01T00:00:00+01:00
+date: 2022-12-03T00:00:00+01:00
 draft: false
-title: "Job #3"
-jobTitle: "CIO"
-company: "Internet Affairs Inc. "
-location: "Stavanger, Norway"
-duration: "2024-now"
-
+title: "Apprentice Software Developer"
+jobTitle: "Apprentice Software Developer"
+company: "Ball State Digital Corps"
+location: "Muncie, Indiana"
+duration: "Sep 2023 - Jan 2025"
+#companyLogo: "images/experience/thedigitalcorps_logo.jpeg"
 ---
-### 3rd job: CIO
+### Apprentice Software Developer
 
-As Chief Information Officer at Internet Affairs Inc., I lead the strategic transformation of our digital infrastructure and cybersecurity initiatives. My team of 150+ IT professionals works tirelessly to protect and optimize our global network spanning 23 countries.
+Collaborated with interdisciplinary teams to develop and deliver
+client-focused software solutions, including web applications and
+digital tools.
 
-During my tenure, I've spearheaded the implementation of a revolutionary blockchain-based verification system that reduced fraudulent transactions by 87% while improving processing speeds by 300%. This initiative saved the company $12M annually and earned us the prestigious "Digital Innovation Award 2024".
+Built responsive front-end interfaces using React and other
+frameworks, while developing back-end systems with AdonisJS,
+WordPress, and Node.js to support seamless functionality.
 
-I'm particularly proud of our "Green Computing" program which has successfully migrated 75% of our data centers to renewable energy sources. This environmental initiative not only reduced our carbon footprint by 45% but also resulted in a 30% reduction in operational costs.
-
-In my role, I also serve as a member of the executive board, helping shape the company's long-term technology vision and ensuring our IT strategy aligns perfectly with our business objectives. Currently leading an ambitious AI integration project that promises to revolutionize our customer service capabilities.
+Applied industry-standard development practices to create
+high-quality, maintainable software, contributing to multiple
+projects and ensuring effective collaboration across teams.

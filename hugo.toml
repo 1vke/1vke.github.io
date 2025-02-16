@@ -1,4 +1,4 @@
-baseURL = "https://1vke.github.io/"
+baseURL = "https://lucaslowe.com/"
 title = "Lucas Lowe"
 languageCode = "en"
 
@@ -53,12 +53,11 @@ images = ['/img/og-img.png']
 sections = [
   "showcase",
   "about",
-  "education",
   "experience",
+  "education",
   "client-and-work",
   "testimonial",
   "contact",
-  "newsletter",
 ]
 # If you want to display an image logo in the header, you can add it here
 # logo = '/img/hugo.svg'
@@ -92,9 +91,9 @@ disableTags = false
 enable = true
 
 [params.languages.selector.disable]
-footer = false
-header = false
-mobileHeader = false
+footer = true
+header = true
+mobileHeader = true
 
 [languages]
 [languages.en]
@@ -110,133 +109,133 @@ weight = 0
 name = 'About'
 URL = '#about'
 weight = 2
-[[languages.en.menus.header]]
-name = 'Portfolio'
-URL = '#portfolio'
-weight = 3
-#  [[languages.en.menus.header]]
-#  name = "Experience"
-#  URL = "#experience"
-#  weight = 4
+#[[languages.en.menus.header]]
+#name = 'Portfolio'
+#URL = '#portfolio'
+#weight = 3
+  [[languages.en.menus.header]]
+  name = "Experience"
+  URL = "#experience"
+  weight = 4
 
 [[languages.en.menus.header]]
-name = "How to"
-URL = "/blog"
+name = "Contact"
+URL = "#contact"
 weight = 5
 
 [[languages.en.menus.header]]
-name = "Contact"
-URL = "#contact"
+name = "Blog"
+URL = "/blog"
 weight = 6
 
-[[languages.en.menus.footer]]
-name = "About"
-URL = "#about"
-weight = 2
-
-[[languages.en.menus.footer]]
-name = "Portfolio"
-URL = "#portfolio"
-weight = 3
-
-[[languages.en.menus.footer]]
-name = "Contact"
-URL = "#contact"
-weight = 4
+#[[languages.en.menus.footer]]
+#name = "About"
+#URL = "#about"
+#weight = 2
+#
+#[[languages.en.menus.footer]]
+#name = "Portfolio"
+#URL = "#portfolio"
+#weight = 3
+#
+#[[languages.en.menus.footer]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 4
 
 
 [languages.es]
-disabled = false
+disabled = true
 languageCode = 'es'
 languageDirection = 'ltr'
 languageName = 'Español'
 title = ''
 weight = 0
-[[languages.es.menus.header]]
-name = 'Sobre mi'
-URL = '/es/#about'
-weight = 2
-[[languages.es.menus.header]]
-name = 'Portfolio'
-URL = '/es/#portfolio'
-weight = 3
-
-#  [[languages.es.menus.header]]
-#  name = "Experiencia"
-#  URL = "/es/#experience"
-#  weight = 4
-
-[[languages.es.menus.header]]
-name = "Blog"
-URL = "/es/blog"
-weight = 5
-
-[[languages.es.menus.header]]
-name = "Contacto"
-URL = "/es/#contact"
-weight = 6
-
-[[languages.es.menus.footer]]
-name = "Sobre mi"
-URL = "/es/#about"
-weight = 2
-
-[[languages.es.menus.footer]]
-name = "Portfolio"
-URL = "/es/#portfolio"
-weight = 3
-
-[[languages.es.menus.footer]]
-name = "Contact"
-URL = "/es/#contact"
-weight = 4
+#[[languages.es.menus.header]]
+#name = 'Sobre mi'
+#URL = '/es/#about'
+#weight = 2
+#[[languages.es.menus.header]]
+#name = 'Portfolio'
+#URL = '/es/#portfolio'
+#weight = 3
+#
+##  [[languages.es.menus.header]]
+##  name = "Experiencia"
+##  URL = "/es/#experience"
+##  weight = 4
+#
+#[[languages.es.menus.header]]
+#name = "Blog"
+#URL = "/es/blog"
+#weight = 5
+#
+#[[languages.es.menus.header]]
+#name = "Contacto"
+#URL = "/es/#contact"
+#weight = 6
+#
+#[[languages.es.menus.footer]]
+#name = "Sobre mi"
+#URL = "/es/#about"
+#weight = 2
+#
+#[[languages.es.menus.footer]]
+#name = "Portfolio"
+#URL = "/es/#portfolio"
+#weight = 3
+#
+#[[languages.es.menus.footer]]
+#name = "Contact"
+#URL = "/es/#contact"
+#weight = 4
 
 [languages.fr]
-disabled = false
+disabled = true
 languageCode = 'fr'
 languageDirection = 'ltr'
 languageName = 'Français'
 title = ''
 weight = 0
 
-[languages.fr.menus]
-[[languages.fr.menus.header]]
-name = 'About'
-URL = '#about'
-weight = 2
-[[languages.fr.menus.header]]
-name = 'Portfolio'
-URL = '#portfolio'
-weight = 3
-#  [[languages.fr.menus.header]]
-#  name = "Experience"
-#  URL = "#experience"
-#  weight = 4
-
-[[languages.fr.menus.header]]
-name = "Blog"
-URL = "/blog"
-weight = 5
-
-[[languages.fr.menus.header]]
-name = "Contact"
-URL = "#contact"
-weight = 6
-
-[[languages.fr.menus.footer]]
-name = "About"
-URL = "#about"
-weight = 2
-
-[[languages.fr.menus.footer]]
-name = "Portfolio"
-URL = "#portfolio"
-weight = 3
-
-[[languages.fr.menus.footer]]
-name = "Contact"
-URL = "#contact"
-weight = 4
+#[languages.fr.menus]
+#[[languages.fr.menus.header]]
+#name = 'About'
+#URL = '#about'
+#weight = 2
+#[[languages.fr.menus.header]]
+#name = 'Portfolio'
+#URL = '#portfolio'
+#weight = 3
+##  [[languages.fr.menus.header]]
+##  name = "Experience"
+##  URL = "#experience"
+##  weight = 4
+#
+#[[languages.fr.menus.header]]
+#name = "Blog"
+#URL = "/blog"
+#weight = 5
+#
+#[[languages.fr.menus.header]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 6
+#
+#[[languages.fr.menus.footer]]
+#name = "About"
+#URL = "#about"
+#weight = 2
+#
+#[[languages.fr.menus.footer]]
+#name = "Portfolio"
+#URL = "#portfolio"
+#weight = 3
+#
+#[[languages.fr.menus.footer]]
+#name = "Contact"
+#URL = "#contact"
+#weight = 4
 
 
 # Plugins
@@ -268,10 +267,10 @@ URL = "scss/adritian.scss"
 [params.colorTheme]
 
 ## the following configuration would disable automatic theme selection
-#  [params.colorTheme.auto]
-#    disable = true
-#  [params.colorTheme.forced]
-#    theme = "dark"
+[params.colorTheme.auto]
+  disable = true
+[params.colorTheme.forced]
+  theme = "dark"
 
 ## the following parameter will disable theme override in the footer
 #  [params.colorTheme.selector.disable]
@@ -279,9 +278,9 @@ URL = "scss/adritian.scss"
 
 
 [params.colorTheme.selector.disable]
-footer = false
-header = false
-mobileHeader = false
+footer = true
+header = true
+mobileHeader = true
 ## by default we allow override AND automatic selection
 
 [params.blog]
