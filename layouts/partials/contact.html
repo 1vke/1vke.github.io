@@ -1,0 +1,31 @@
+{{ if .Site.Data.homepage.contact.enable }}
+<section id="contact" class="section section--contact">
+    <div class="container">
+        <div class="contact">
+            <h2>{{ i18n "contact_title" }}</h2>
+            <div class="row pt-2">
+                <div class="col-12 col-lg-4 contact__info">
+                    {{ if i18n "contact_phone_number" }}
+                    <h3>{{ i18n "contact_phone_title" }}</h3>
+                    <span>{{ i18n "contact_phone_number" }}</span>
+                    {{ end }}
+                </div>
+
+                <div class="col-12 col-lg-4 contact__info">
+                    {{ if i18n "contact_email_email" }}
+                    <h3>{{ i18n "contact_email_title" }}</h3>
+                    <span>{{ i18n "contact_email_email" | safeHTML }}</span>
+                    {{ end }}
+                </div>
+
+                <div class="col-12 col-lg-4 contact__info">
+                    {{ if i18n "contact_address_address" }}
+                    <h3>{{ i18n "contact_address_title" }}</h3>
+                    <span>{{ i18n "contact_address_address" | safeHTML }}</span>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
