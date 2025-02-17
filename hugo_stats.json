@@ -39,7 +39,6 @@
       "ul"
     ],
     "classes": [
-      "about__profile-picture",
       "active",
       "align-items-center",
       "align-items-start",
@@ -119,8 +118,6 @@
       "icon-file-pdf",
       "icon-linkedin",
       "icon-square-github",
-      "icon-user",
-      "image-left-overflow",
       "img-responsive",
       "job-card",
       "job-card__dates",
@@ -143,7 +140,6 @@
       "mt-7",
       "mt-sm-0",
       "mx-auto",
-      "my-auto",
       "nav-item",
       "nav-link",
       "navbar",
@@ -174,7 +170,6 @@
       "page-robo-advisor",
       "page-swiss-fintech",
       "page-ztos",
-      "pb-0",
       "platform-links",
       "posts-list",
       "profile-image",
@@ -205,7 +200,6 @@
       "w-100"
     ],
     "ids": [
-      "about",
       "about-me",
       "apprentice-software-developer",
       "breadcrumb-bar",

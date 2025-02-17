@@ -104,11 +104,11 @@ languageName = 'English'
 title = ''
 weight = 0
 
-[languages.en.menus]
-[[languages.en.menus.header]]
-name = 'About'
-URL = '#about'
-weight = 2
+#[languages.en.menus]
+#[[languages.en.menus.header]]
+#name = 'About'
+#URL = '#about'
+#weight = 2
 #[[languages.en.menus.header]]
 #name = 'Portfolio'
 #URL = '#portfolio'
@@ -272,8 +272,8 @@ URL = "scss/adritian.scss"
 [params.colorTheme.forced]
   theme = "light"
 
-## the following parameter will disable theme override in the footer
-#  [params.colorTheme.selector.disable]
+### the following parameter will disable theme override in the footer
+#[params.colorTheme.selector.disable]
 #  footer = true
 
 

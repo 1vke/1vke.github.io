@@ -22,7 +22,7 @@ showcase:
 
 # about
 about:
-  enable: true
+  enable: false
   button:
     icon: "icon-user"
     URL: "https://www.linkedin.com/in/cs-lucaslowe/"
