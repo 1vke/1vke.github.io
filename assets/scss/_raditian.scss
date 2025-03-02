@@ -244,6 +244,7 @@
     font-size: 19px;
 }
 .contact {
+    background: $nord1;
     padding: 60px 30px;
 }
 @media (min-width: 768px) {
@@ -833,7 +834,7 @@ textarea:focus {
 .header .navbar-brand span:nth-child(2) {
     margin-top: -20px;
     align-self: center;
-    font-family: AutumnMoon;
+    font-family: AutumnMoon, serif;
     font-size: 25px;
     font-weight: 400;
     letter-spacing: -1.17px;
