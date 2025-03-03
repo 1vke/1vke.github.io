@@ -169,7 +169,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   translation: "Phone Number"
 
 - id: "contact_phone_number"
-  translation: "NO PHONE NUMBER"
+  translation: "+1 615-927-0518"
 
 - id: "contact_email_title"
   translation: "Email"

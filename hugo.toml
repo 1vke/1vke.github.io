@@ -124,9 +124,14 @@ URL = "#contact"
 weight = 5
 
 [[languages.en.menus.header]]
+name = "Portfolio"
+URL = "/portfolio"
+weight = 6
+
+[[languages.en.menus.header]]
 name = "Blog"
 URL = "/blog"
-weight = 6
+weight = 7
 
 #[[languages.en.menus.footer]]
 #name = "About"

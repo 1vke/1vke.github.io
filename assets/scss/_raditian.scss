@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$brand: $nord15;
+
 .embed-responsive {
     position: relative;
     display: block;
@@ -1246,6 +1248,11 @@ textarea:focus {
 
 /* adritian custom css */
 
+.profile-image {
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(20px 15px $brand);
+}
 
 .profile-image img{
     max-inline-size: 100%;
