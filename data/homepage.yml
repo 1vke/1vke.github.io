@@ -15,9 +15,11 @@ showcase:
 
   socialLinks:
     - icon: "linkedin"
+      name: "Linkedin"
       URL: "https://www.linkedin.com/in/cs-lucaslowe/"
 
     - icon: "square-github"
+      name: "Github"
       URL: "https://github.com/1vke"
 
 # about

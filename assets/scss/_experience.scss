@@ -1,11 +1,17 @@
 $brand: $nord15;
 
-.experience__company {
-    color: $nord15 !important;
+@media (max-width: 767px) {
+    .experience-list {
+        width: 100%;
+    }
 }
 
 .experience__company {
-    color: $nord15;
+    color: $brand!important;
+}
+
+.experience__company {
+    color: $brand;
 }
 
 .experience__location {
@@ -33,7 +39,7 @@ body.home div.experience {
 .experience a:hover,
 .experience a:active {
     display: block;
-    background-color: $nord15;
+    background-color: $brand;
 }
 
 .experience.selected a .experience__company,
@@ -116,7 +122,7 @@ body.home div.experience {
 
 
     html[data-bs-theme="dark"] & {
-        background-color: $nord1;
+        background-color: $brand;
         color: white;
 
         .experience__title,

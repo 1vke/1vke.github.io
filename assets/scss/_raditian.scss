@@ -1254,6 +1254,13 @@ textarea:focus {
     filter: drop-shadow(20px 15px $brand);
 }
 
+@media only screen and (max-width : 768px) {
+    .profile-image {
+        margin-bottom: 3em;
+        max-width: 95%;
+    }
+}
+
 .profile-image img{
     max-inline-size: 100%;
     block-size: auto;

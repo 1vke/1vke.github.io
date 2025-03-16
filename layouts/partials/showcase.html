@@ -18,6 +18,11 @@
                     <i class="{{ .Site.Data.homepage.showcase.button.icon }}"></i>
                     {{ i18n "showcase_button" }}
                 </a>
+                {{ range .Site.Data.homepage.showcase.socialLinks }}
+                    <a href="{{ .URL | absURL }}" target="_blank" class="btn" rel="noopener noreferrer" aria-label="{{ .icon }}"
+                    ><i class="icon-{{ .icon }}"></i
+                    >{{ .name }}</a>
+                {{ end }}
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 profile-image">
 
@@ -49,15 +54,6 @@
                 {{ end }}
                 {{ end }}
 
-            </div>
-        </div>
-        <div class="row platform-links">
-            <div class="col-12">
-                {{ range .Site.Data.homepage.showcase.socialLinks }}
-                <a href="{{ .URL | absURL }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .icon }}"
-                ><i class="icon-{{ .icon }}"></i
-                ></a>
-                {{ end }}
             </div>
         </div>
     </div>
