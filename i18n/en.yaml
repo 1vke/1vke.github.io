@@ -63,10 +63,13 @@
   translation: ""
 
 - id: "showcase_description"
-  translation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-  dolore magna aliqua.<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br>
-  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  translation: "<p>Based in Muncie, Indiana, I'm currently pursuing a Bachelor's degree in Computer Science at Ball State University.
+  During the day, I apply my software development skills at work, building solutions for real-world problems. By night, I dive into personal
+   projects, always looking for ways to refine my craft and create something useful.</p>
+   <br/>
+   <p>Lately, I’ve been really into offensive cybersecurity,
+    game console modding, video games, and taking old or broken tech and giving it a second life. Outside of technology, I enjoy skateboarding 
+    and getting outdoors whenever the weather allows.</p>"
 
 - id: "showcase_button"
   translation: "Contact"
@@ -99,10 +102,13 @@
   translation: "Experience"
 
 - id: "experience_description"
-  translation: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>'
+  translation: "<p>Software Developer, currently building software solutions for Ball State University while pursuing a Computer Science degree. I'm passionate about development methodologies like Agile, Extreme Programming, and Test-Driven Development.</p>
+
+<p>I have extensive experience with JavaScript, TypeScript, HTML/CSS, and Python, and I've worked with frameworks such as React, AdonisJS, and WordPress. Additionally, I’m familiar with Java, C#, PHP, and Objective-C. I’m eager to expand my skill set by learning C++, C, and Swift—I’m just waiting for the right personal project to dive in.</p>
+
+<p>I also have a strong interest in cybersecurity, particularly offensive security. While my experience in this area has mostly been through personal projects and some work-related opportunities, I’d love to explore it further. For now, I’m focused on software development but could see myself pursuing offensive security research in the future.</p>
+
+<p>I use Windows, macOS, and Linux interchangeably, depending on my needs. My Linux experience is primarily server-based, focusing on managing and deploying applications, but I also have significant experience with GNOME-based desktop environments.</p>"
 
 - id: "experience_button"
   translation: "LinkedIn"
@@ -111,7 +117,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   translation: "https://www.linkedin.com/in/cs-lucaslowe/"
 
 - id: "experience_button2"
-  translation: "Download resume"
+  translation: "Resume"
 
 - id: "experience_button2_url"
   translation: "LucasLoweResume.pdf"

@@ -11,7 +11,7 @@ showcase:
 
   button:
     icon: "icon-email"
-    URL: "https://lucaslowe.com/"
+    URL: "mailto:lowel9295@gmail.com"
 
   socialLinks:
     - icon: "linkedin"
