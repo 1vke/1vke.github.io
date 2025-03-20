@@ -128,10 +128,10 @@ name = "Portfolio"
 URL = "/portfolio"
 weight = 6
 
-[[languages.en.menus.header]]
-name = "Blog"
-URL = "/blog"
-weight = 7
+#[[languages.en.menus.header]]
+#name = "Blog"
+#URL = "/blog"
+#weight = 7
 
 #[[languages.en.menus.footer]]
 #name = "About"
@@ -288,6 +288,14 @@ header = true
 mobileHeader = true
 ## by default we allow override AND automatic selection
 
+[params.portfolio]
+layout = "default"     # options: default, sidebar
+sidebarWidth = "25"    # percentage width of the sidebar
+showCategories = true
+showRecentPosts = true
+recentPostCount = 5
+listStyle = "summary"  # options: simple, summary
+
 [params.blog]
 layout = "default"     # options: default, sidebar
 sidebarWidth = "25"    # percentage width of the sidebar
@@ -298,4 +306,4 @@ listStyle = "summary"  # options: simple, summary
 
 
 [params.experience]
-showJobCard = true # Set to false to hide the job card
+showJobCard = false # Set to false to hide the job card

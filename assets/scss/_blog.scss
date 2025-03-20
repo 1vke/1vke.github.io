@@ -76,6 +76,10 @@ $brand: $nord8;
   color: $brand;
 }
 
+#blog-single p {
+  margin-bottom: 1.5rem;
+}
+
 @include color-mode(dark) {
   .blog {
     .blog-sidebar {
