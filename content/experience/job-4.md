@@ -1,15 +1,13 @@
 ---
 date: 2022-12-04T00:00:00+01:00
 draft: false
-title: "Specialist Software Developer"
+title: ""
 jobTitle: "Specialist Software Developer"
 company: "Ball State Digital Corps"
 location: "Muncie, Indiana"
 duration: "Jan 2025 - Present"
 #companyLogo: "images/experience/thedigitalcorps_logo.jpeg"
 ---
-### Specialist Software Developer
-
 Collaborate with multidisciplinary student teams to create
 technology solutions for Ball State University and the affiliated
 Muncie community, including web and mobile applications.
