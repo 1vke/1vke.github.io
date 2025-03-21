@@ -51,13 +51,13 @@ title = 'Adritian - a high performance hugo theme by Adrián Moreno'
 description = 'This hugo theme (Adritian) is based on Bootstrap and has features that make it suitable for a personal site, a portfolio or other kind of Single Page Applications.'
 images = ['/img/og-img.png']
 sections = [
-  "showcase",
-  "about",
-  "experience",
-  "education",
-  "client-and-work",
-  "testimonial",
-  "contact",
+    "showcase",
+    "about",
+    "experience",
+    "education",
+    "client-and-work",
+    "testimonial",
+    "contact",
 ]
 # If you want to display an image logo in the header, you can add it here
 # logo = '/img/hugo.svg'
@@ -113,10 +113,10 @@ weight = 0
 #name = 'Portfolio'
 #URL = '#portfolio'
 #weight = 3
-  [[languages.en.menus.header]]
-  name = "Experience"
-  URL = "#experience-single"
-  weight = 4
+[[languages.en.menus.header]]
+name = "Experience"
+URL = "#experience-single"
+weight = 4
 
 [[languages.en.menus.header]]
 name = "Contact"
@@ -273,9 +273,9 @@ URL = "scss/adritian.scss"
 
 ## the following configuration would disable automatic theme selection
 [params.colorTheme.auto]
-  disable = true
+disable = true
 [params.colorTheme.forced]
-  theme = "dark"
+theme = "dark"
 
 ### the following parameter will disable theme override in the footer
 #[params.colorTheme.selector.disable]
@@ -307,3 +307,7 @@ listStyle = "summary"  # options: simple, summary
 
 [params.experience]
 showJobCard = false # Set to false to hide the job card
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'

@@ -32,7 +32,6 @@
       "section",
       "source",
       "span",
-      "strong",
       "style",
       "title",
       "ul"
@@ -206,7 +205,6 @@
       "about-me",
       "blog-single",
       "breadcrumb-bar",
-      "challenges--solutions",
       "contact",
       "content",
       "date",
@@ -215,16 +213,12 @@
       "experience-list",
       "experience-single",
       "header",
-      "impact",
-      "key-technologies",
       "main",
       "main-content",
       "meta",
-      "my-role",
       "navbarSupportedContent",
       "showcase",
       "title",
-      "why-these-technologies",
       "wordcount"
     ]
   }
