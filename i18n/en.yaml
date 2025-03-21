@@ -175,7 +175,7 @@
   translation: "Phone Number"
 
 - id: "contact_phone_number"
-  translation: "+1 615-927-0518"
+  translation: "N/A"
 
 - id: "contact_email_title"
   translation: "Email"
