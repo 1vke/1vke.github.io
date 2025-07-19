@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Portfolio on Lucas Lowe&#39;s Portfolio &amp; Blog</title>
+    <link>http://localhost:1313/portfolio/</link>
+    <description>Recent content in Portfolio on Lucas Lowe&#39;s Portfolio &amp; Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, Lucas Lowe.</copyright>
+    <lastBuildDate>Thu, 06 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ball State Bus Tracker (in development)</title>
+      <link>http://localhost:1313/portfolio/bsu-bus-tracker/post/</link>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/bsu-bus-tracker/post/</guid>
+      <description>&lt;p&gt;The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students&#xA;and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with&#xA;an in-house solution.&lt;/p&gt;&#xA;&lt;p&gt;The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app.&#xA;Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React.&#xA;The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For&#xA;route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop&#xA;data is stored in GeoJSON format, a structured format widely used for mapping applications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digital Corps Office TV Boards</title>
+      <link>http://localhost:1313/portfolio/tvboards/post/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/tvboards/post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/portfolio/tvboards/thumbnail.jpg&#34; alt=&#34;tv board&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;At my current job, there are two vertically mounted TVs in the office that display a website with daily announcements,&#xA;weather updates, countdowns, and specific Slack channel slides, such as one dedicated to sharing pictures of pets. This&#xA;system was originally developed in 2018, but by the time I started working on it in 2024, none of the original developers&#xA;were still with the company, as they had graduated. Over time, as I was working, I became more and more curious on how&#xA;they worked and why they would not function correctly sometimes. I eventually just made it my own side project to make&#xA;them better.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Digital Corps Website (in development)</title>
+      <link>http://localhost:1313/portfolio/dc-website/post/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/dc-website/post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/portfolio/dc-website/thumbnail.jpg&#34; alt=&#34;Digital Corps website&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;One of the most significant projects I’ve worked on at the Digital Corps is the development of a new website for the company. This project involved working with multiple APIs, including WordPress and our in-house API, to create a seamless and functional experience. On the frontend, I was responsible for two pages: the Staff Page and the Team Page. I implemented complex styling for both desktop and mobile views, ensuring the design was both visually appealing and responsive. Additionally, I integrated WordPress content into the frontend, allowing the communication team and other members of the Digital Corps to easily manage and update content. Many of the components I developed were designed for reusability, enabling my colleagues to implement them across different sections of the website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iClicker Authorization Bypass Vulnerability</title>
+      <link>http://localhost:1313/portfolio/iclicker-authorization-bypass-vulnerability/post/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/iclicker-authorization-bypass-vulnerability/post/</guid>
+      <description>&lt;p&gt;During my research into the iClicker web application, I discovered a vulnerability in it that allowed users to bypass&#xA;location-based restrictions. This flaw made it possible for students to spoof their locations and join sessions remotely,&#xA;undermining the integrity of the platform’s location-based attendance system.&lt;/p&gt;&#xA;&lt;p&gt;iClicker requires students to be physically present in a session’s location to join. However, this check was enforced&#xA;through a flawed system. When a student attempted to join a session, the iClicker app would request the device’s&#xA;geolocation and send it to iClicker’s servers. If the location check failed, the server responded with the exact&#xA;coordinates of the session’s location. This was the key flaw—rather than simply displaying a static map image, the&#xA;server directly sent latitude and longitude data, making it easy to capture and reuse.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>iOS Messages Jailbreak Tweak</title>
+      <link>http://localhost:1313/portfolio/messages-tweak/post/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/messages-tweak/post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/portfolio/messages-tweak/thumbnail.jpg&#34; alt=&#34;ios messages tweak&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I developed an iOS jailbreak tweak that allows users to modify the colors of message balloons in the iOS Messages app.&#xA;This tweak was built using Theos, a cross-platform build system for jailbreak software development, and was written in&#xA;Objective-C.&lt;/p&gt;&#xA;&lt;p&gt;Using existing jailbreak software as a foundation, I reverse-engineered the Messages app to understand how to inject my&#xA;own modifications. I had always wanted a way to customize message balloon colors, so I set out to create a solution&#xA;myself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Inventory Management System</title>
+      <link>http://localhost:1313/portfolio/inventory-management/post/</link>
+      <pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/inventory-management/post/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/portfolio/inventory-management/thumbnail.png&#34; alt=&#34;Inventory management system&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my senior year of high school, I built a web application that allowed users to scan devices into a database and&#xA;generate barcodes for each one. When a barcode was scanned, the system would pull up all relevant device data on a&#xA;dedicated page, or add the device to the database if the code didn’t exist, depending on how the settings were&#xA;configured.&lt;/p&gt;&#xA;&lt;p&gt;At the time, my teacher was teaching Python, but since I already had some experience with it, he encouraged me to take&#xA;on a more advanced project. I chose to develop this system, despite having no prior experience with the framework I used&#xA;or working with databases. Over the course of six weeks, I learned both on the fly and successfully built a functional&#xA;solution.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

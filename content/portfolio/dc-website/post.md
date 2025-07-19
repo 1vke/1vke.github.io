@@ -1,0 +1,16 @@
+---
+title: "Digital Corps Website (in development)"
+date: 2025-03-04
+draft: false
+---
+![Digital Corps website](/portfolio/dc-website/thumbnail.jpg)
+
+One of the most significant projects I’ve worked on at the Digital Corps is the development of a new website for the company. This project involved working with multiple APIs, including WordPress and our in-house API, to create a seamless and functional experience. On the frontend, I was responsible for two pages: the Staff Page and the Team Page. I implemented complex styling for both desktop and mobile views, ensuring the design was both visually appealing and responsive. Additionally, I integrated WordPress content into the frontend, allowing the communication team and other members of the Digital Corps to easily manage and update content. Many of the components I developed were designed for reusability, enabling my colleagues to implement them across different sections of the website.
+
+Beyond frontend work, I also contributed to the backend by enhancing the WordPress plugin used for content management. I expanded its functionality by introducing multiple ways to retrieve specific posts, such as employee information and other custom post types. Instead of returning only an ID when a post referenced another post, I modified the system to include the referenced post’s details, making it more user-friendly. Additionally, I integrated fetching capabilities to our in-house API to return employee data alongside certain post types, like staff profiles.
+
+On the API side, I added new controller methods to filter employees, which was particularly useful for retrieving alumni data. Throughout this project, I gained valuable experience in CSS techniques and best practices. I had to get creative when handling floating design elements and non-traditional element shapes, ensuring the final layout remained visually appealing while staying true to the design. Careful planning was essential; a poorly structured layout would have made styling and responsiveness difficult to manage.
+
+This project is special to me for several reasons. It was one of my first major assignments after completing training at my job, and since the website represents the Digital Corps itself, I took great pride in trying to make it look and perform its best. It also taught me important lessons in coding practices, new styling techniques, and page layout strategies. More importantly, I improved my communication skills by collaborating with colleagues from different teams. I worked closely with our UX team to better understand user interactions and coordinated with the design team to ensure I was on track with their vision. In some cases, I even helped rework designs to make them more feasible or enhance usability.
+
+Although this project has been put on hold due to higher-priority tasks, I’m excited to return to it when the time comes. I look forward to applying what I’ve learned and making further improvements to ensure the website is as polished and effective as possible.

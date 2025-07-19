@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>Ball State Bus Tracker (in development) | Lucas Lowe&#39;s Portfolio &amp; Blog</title>
+<meta name="title" content="Ball State Bus Tracker (in development)" />
+<meta name="description" content="The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students
+and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with
+an in-house solution.
+The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app.
+Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React.
+The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For
+route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop
+data is stored in GeoJSON format, a structured format widely used for mapping applications." />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="http://localhost:1313/portfolio/bsu-bus-tracker/post/">
+  <meta property="og:site_name" content="Lucas Lowe&#39;s Portfolio & Blog">
+  <meta property="og:title" content="Ball State Bus Tracker (in development)">
+  <meta property="og:description" content="The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with an in-house solution.
+The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app. Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React. The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop data is stored in GeoJSON format, a structured format widely used for mapping applications.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="portfolio">
+    <meta property="article:published_time" content="2025-03-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-06T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="Ball State Bus Tracker (in development)">
+  <meta name="twitter:description" content="The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with an in-house solution.
+The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app. Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React. The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop data is stored in GeoJSON format, a structured format widely used for mapping applications.">
+
+
+
+
+  <meta itemprop="name" content="Ball State Bus Tracker (in development)">
+  <meta itemprop="description" content="The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with an in-house solution.
+The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app. Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React. The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop data is stored in GeoJSON format, a structured format widely used for mapping applications.">
+  <meta itemprop="datePublished" content="2025-03-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-03-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="464">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Lucas Lowe&#39;s Portfolio &amp; Blog</h2>
+</a>
+<nav>
+<a href="/">About Me</a>
+
+<a href="/experience/">Experience</a>
+
+<a href="/portfolio/">Portfolio</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<content>
+  <p>The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students
+and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with
+an in-house solution.</p>
+<p>The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app.
+Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React.
+The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For
+route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop
+data is stored in GeoJSON format, a structured format widely used for mapping applications.</p>
+<p>One of the biggest challenges has been handling route visualization. Initially, we aimed to offset overlapping routes,
+similar to subway maps. However, dynamically detecting and shifting overlapping sections proved complex. Instead, we
+opted to allow route overlap while providing toggle buttons for individual visibility. Another challenge has been
+animating bus markers smoothly. I implemented transitions using requestAnimationFrame to interpolate between position
+updates, ensuring smooth movement and preventing abrupt jumps.</p>
+<p>The project has required extensive research into digital cartography and mapping best practices. I have explored various
+mapping libraries, evaluated data sources, and studied map tile types, zoom levels, and vector versus raster tiles. This
+research ensures we select the best tools for the job and build a reliable system.</p>
+<p>Once completed, this project will significantly improve campus transportation usability. Reliable tracking will reduce
+uncertainty, making bus usage more efficient for students and faculty. The removal of TransLoc left many commuters
+struggling, and this widget aims to restore essential functionality. Personally, as a former dorm resident and now an
+off-campus commuter, I understand the necessity of real-time bus tracking. Waiting in the cold or missing a bus due to a
+lack of information is frustrating, and this solution seeks to mitigate those issues.</p>
+<p>I have played a key role in this project as the sole front-end developer. I have led the front-end reseavrch, development,
+and implementation of the widget, collaborating with the UX and design team on the designs and backend developers to
+integrate tracking functionalities. Ensuring feature parity with previous systems has been a top priority. This project
+is not just a one-time solution; it is expected to continue evolving, potentially leading to a native mobile app in the
+future.</p>
+<p>Being part of a project that directly impacts the daily lives of students and faculty has been incredibly rewarding. Not
+a day goes by when I don’t hear someone wishing for a bus tracker. Knowing that I am playing a crucial role in making it
+happen is a fulfilling experience, and I look forward to seeing how this project grows.</p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>Made with <a href="https://github.com/janraasch/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</footer>
+
+  
+</body>
+
+</html>

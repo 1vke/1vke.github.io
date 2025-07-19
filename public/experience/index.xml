@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Experience on Lucas Lowe&#39;s Portfolio &amp; Blog</title>
+    <link>http://localhost:1313/experience/</link>
+    <description>Recent content in Experience on Lucas Lowe&#39;s Portfolio &amp; Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>Copyright © 2025, Lucas Lowe.</copyright>
+    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/experience/job-4/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/experience/job-4/</guid>
+      <description>&lt;p&gt;Collaborate with multidisciplinary student teams to create&#xA;technology solutions for Ball State University and the affiliated&#xA;Muncie community, including web and mobile applications.&lt;/p&gt;&#xA;&lt;p&gt;Develop interactive website widgets integrated into Ball State&amp;rsquo;s&#xA;MyBallState app, enhancing the user experience for students and&#xA;supporting campus engagement.&lt;/p&gt;&#xA;&lt;p&gt;Manage multiple projects per semester with diverse teams, ensuring&#xA;consistent progress through weekly meetings focused on project&#xA;development and soft skills, while contributing to high-quality&#xA;deliverables and gaining industry experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/experience/job-3/</link>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/experience/job-3/</guid>
+      <description>&lt;p&gt;Collaborated with interdisciplinary teams to develop and deliver&#xA;client-focused software solutions, including web applications and&#xA;digital tools.&lt;/p&gt;&#xA;&lt;p&gt;Built responsive front-end interfaces using React and other&#xA;frameworks, while developing back-end systems with AdonisJS,&#xA;WordPress, and Node.js to support seamless functionality.&lt;/p&gt;&#xA;&lt;p&gt;Applied industry-standard development practices to create&#xA;high-quality, maintainable software, contributing to multiple&#xA;projects and ensuring effective collaboration across teams.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/experience/job-2/</link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/experience/job-2/</guid>
+      <description>&lt;p&gt;Refreshed Linux fundamentals with a focus on Kali Linux for cybersecurity applications and secure networking environments.&lt;/p&gt;&#xA;&lt;p&gt;Investigated networking concepts, including packet structure and SSL encryption, and utilized Wireshark to monitor traffic.&lt;/p&gt;&#xA;&lt;p&gt;Captured Wi-Fi network handshakes, cracked passwords using wordlists, and set up routers.&lt;/p&gt;&#xA;&lt;p&gt;Explored web application security through a demo of the OWASP Juice Shop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/experience/job-1/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/experience/job-1/</guid>
+      <description>&lt;p&gt;Developed foundational skills in Linux distributions, command-line&#xA;usage, and REST API creation with Node.js Express.&lt;/p&gt;&#xA;&lt;p&gt;Designed and implemented a MariaDB SQL database with RESTful&#xA;query integration.&lt;/p&gt;&#xA;&lt;p&gt;Enhanced backend development and data management&#xA;knowledge.&lt;/p&gt;&#xA;&lt;p&gt;Strengthened problem-solving skills through hands-on web service&#xA;development.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
