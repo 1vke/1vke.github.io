@@ -2,9 +2,9 @@ education:
   enable: true
   items:
     - school: "Ball State University"
-      year: "2023-2026"
+      year: "2023 - 2026"
       degree: "Bachelor of Science (BS), Computer Science"
 
     - school: "Castle High School"
-      year: "2020-2023"
+      year: "2020 - 2023"
       degree: "High School Diploma, Sciences, Math, Computer Science Studies"
