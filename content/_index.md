@@ -15,8 +15,3 @@ Software Developer, currently building software solutions for Ball State Univers
 I have extensive experience with JavaScript, TypeScript, HTML/CSS, and Python, and I've worked with frameworks such as React, AdonisJS, and WordPress. Additionally, I’m familiar with Java, C#, PHP, and Objective-C. I’m eager to expand my skill set by learning C++, C, and Swift. I’m just waiting for the right personal project to dive in.
 
 I also have a strong interest in cybersecurity, particularly offensive security. While my experience in this area has mostly been through personal projects and some work-related opportunities, I’d love to explore it further. For now, I’m focused on software development but could see myself pursuing offensive security research in the future.
-
-{{< experience >}}
-
-# Education
-{{< education >}}
