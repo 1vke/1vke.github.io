@@ -6,7 +6,7 @@ baseURL = "https://lucaslowe.com"
 theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
-title = "Lucas Lowe's Portfolio & Blog"
+title = "Lucas Lowe's Website"
 author = "Lucas Lowe"
 copyright = "Copyright © 2025, Lucas Lowe."
 languageCode = "en-US"
