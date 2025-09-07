@@ -3,6 +3,8 @@ title: "iOS Messages Jailbreak Tweak"
 date: 2025-03-02
 draft: false
 ---
+# iOS Messages Jailbreak Tweak
+
 ![ios messages tweak](/portfolio/messages-tweak/thumbnail.jpg)
 
 I developed an iOS jailbreak tweak that allows users to modify the colors of message balloons in the iOS Messages app. 

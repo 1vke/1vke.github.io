@@ -1,50 +1,18 @@
 ---
 title: "Digital Corps Office TV Boards"
-date: 2025-03-05
+date: 2024-03-05
 draft: false
 ---
+# Digital Corps Office TV Boards
+
 ![tv board](/portfolio/tvboards/thumbnail.jpg)
 
-At my current job, there are two vertically mounted TVs in the office that display a website with daily announcements,
-weather updates, countdowns, and specific Slack channel slides, such as one dedicated to sharing pictures of pets. This 
-system was originally developed in 2018, but by the time I started working on it in 2024, none of the original developers
-were still with the company, as they had graduated. Over time, as I was working, I became more and more curious on how 
-they worked and why they would not function correctly sometimes. I eventually just made it my own side project to make 
-them better.
+At my previous role at the Digital Corps, two large TV screens served as the daily pulse of the team, displaying announcements, weather, and photos of our pets. But this system, built years ago, was starting to show its age. It was unreliable, and with the original developers long since graduated, it had become a bit of a mystery. My curiosity got the best of me, and I decided to take it on as a personal project to see if I could breathe new life into it.
 
-One of my first tasks I set off to do was to migrate the operating system of the display computers from Windows to 
-Kubuntu. This change provided greater stability, better performance, and improved system management.
+My investigation started with the software. I began by migrating the underlying computers from Windows to Kubuntu for better stability and performance. Then, I dove into the codebase, modernizing the original JavaScript React app to use Vite and TypeScript. This wasn't just a simple conversion; it was an archeological dig through old code, fixing type inconsistencies and restructuring logic to be more robust. I also implemented better error handling, so a lost internet connection or a failing slide would no longer crash the entire display.
 
-Next, I focused on modernizing the codebase by converting it from JavaScript to TypeScript. The original website was 
-built using Create-React-App, which I transitioned to a Vite-based TypeScript React app. This migration improved 
-performance and helped resolve numerous type inconsistencies and code inconsistencies. Some issues were straightforward 
-to fix, while others required deeper logical restructuring.
+But even with a modernized and more stable codebase, the performance was still sluggish. Animations were choppy, and the display would occasionally glitch. This pushed me to look beyond the code and investigate the hardware itself. The aging computers were running at a scorching 100°C, with one machine's fan having failed completely. The "burn-in" I thought I was seeing on the TVs was actually the result of the onboard graphics overheating and creating visual artifacts. The hardware was the true bottleneck.
 
-To improve application stability, I introduced better error handling. Previously, internet connection failures would 
-cause the entire website to crash or stall, but I implemented a full-screen error message to notify users of connectivity
-issues without breaking the system. Additionally, individual slide failures no longer caused the entire website to 
-crash—now, errors are isolated within their respective slides.
+This discovery turned my software project into a full-stack hardware and software overhaul. I researched and sourced new computers, set them up, and installed them behind the TVs. The difference was immediate. With capable hardware, the displays could finally run smoothly at 4K resolution and a 60Hz refresh rate, making the entire system feel responsive and new.
 
-I also worked on making the styles more responsive to different screen resolutions. The older TV boards originally ran 
-at 4K resolution with a 30Hz refresh rate, which resulted in sluggish animations and performance issues. To address this,
-I switched the resolution to 1080p at a 60Hz refresh rate, significantly improving animation fluidity and overall 
-responsiveness. However, the styles were originally designed with static dimensions for 4K resolution, meaning they didn’t
-scale well across different screen sizes. This issue eventually became less relevant as the aging computers started to 
-fail—both of them were consistently running at 100°C. One machine even had its fan fail entirely, leading to extreme lag
-due to thermal throttling and rendering issues.
-
-Realizing that the hardware needed an upgrade, I assessed the old computers, identified the necessary functionality, and
-researched the market for suitable replacements. After selecting and purchasing new computers, I set them up and installed
-them behind the televisions. These upgrades resolved many of the lingering display issues. Previously, the TV outputs 
-appeared to suffer from burn-in, but the actual problem was overheating onboard graphics, which caused visual artifacts 
-and degraded performance. With the new machines, 4K resolution could now run smoothly at a 60Hz refresh rate, significantly
-improving the display quality.
-
-After modernizing the codebase, improving error handling, and reassessing the system architecture, it became clear that a
-native application might be a better fit than a web-based solution. Since the display system is only used on two identical
-computers and isn’t meant to be accessed elsewhere, a native app—possibly built with Tauri or Electron—would eliminate the
-need for web hosting. However, this transition would introduce new challenges, particularly regarding updates. The current
-web application benefits from the CI/CD pipelines we have set up, making it easy to push updates and see changes within 
-minutes. A native application, on the other hand, would require a built-in update mechanism to ensure that new versions 
-could be deployed efficiently. While I haven’t fully researched this yet, it’s an interesting consideration for the future
-of the project.
+This project was a powerful lesson in looking at the bigger picture. It taught me to diagnose problems from the application layer all the way down to the physical hardware. The experience also sparked ideas for future improvements, like transitioning to a native application using Tauri or Electron. What started as simple curiosity became a comprehensive project that reinforced my love for diving deep, solving complex problems, and making a tangible impact on the environment around me.
