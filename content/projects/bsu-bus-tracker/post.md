@@ -1,8 +1,10 @@
 ---
-title: "Ball State Bus Tracker"
-date: 2025-03-06
-draft: true
+title: "Ball State Bus Tracker Widget"
+date: 2025-12-06
+draft: false
 ---
+
+{{< figure src="/projects/bsu-bus-tracker/thumbnail.jpg" alt="Lucas standing in front of a TV that is displaying a live advert of the Ball State Bus Tracker widget when it was first released to students in the beginning of the fall semester." caption="Me standing in front of a digital signage display promoting the new bus tracker launch. I was honestly so excited in this picture! Also, this was just a website, so the tracker was live and interactive, super cool. S/O Digital Corps!" >}}
 
 Waiting in the freezing Indiana winter for a bus that never shows up is a rite of passage for many Ball State students. When the previous tracking system, TransLoc, disappeared without notice, the campus was understandably upset and so was I. 
 
@@ -13,7 +15,7 @@ I immediately started egging on my superiors at the Digital Corps, convinced tha
 We needed a solution that was lightweight, maintainable, and cost-effective.
 
 *   **Preact:** I chose Preact for its tiny footprint. It integrates seamlessly into the existing app while allowing us to use the React ecosystem our team is already comfortable with.
-*   **MapLibre & Protomaps:** To avoid the high costs of commercial mapping APIs, we leveraged Protomaps with MapLibre. We host a specific PMTiles archive of the campus area on an AWS S3 bucket, giving us a robust, self-contained vector mapping solution.
+*   **MapLibre & Protomaps:** To avoid the high costs of commercial mapping APIs, we leveraged Protomaps with MapLibre. We host a specific PMTiles archive of the campus area on an AWS S3 bucket, giving us a robust, self-contained vector mapping solution. Utilizing Protomaps also meant we didn't have to make a map style, as it comes with some great out of the box styling!
 *   **Data Pipeline:** We used the Open Source Routing Machine (OSRM) to generate precise route geometries from our bus stops, storing everything in GeoJSON for easy consumption.
 
 ## Engineering Challenges
@@ -48,4 +50,4 @@ Reflecting on this now, eight months after leaving the Digital Corps, this proje
 2.  **New Opportunities:** The success of this in-house solution impressed the university administration, solidifying the Corps' reputation for tackling high-impact, technical challenges.
 3.  **Real-World Difference:** Even now, I still hear how the bus tracker helps students get to class on time or avoid a long wait in the rain.
 
-There’s a unique satisfaction in building the tool you wish you had. Knowing that I played a crucial role in restoring this service, and leaving it in a better state than I found it, was the perfect way to cap off my time at the university.
+There’s a unique satisfaction in building the tool you wish you had. Knowing that I played a crucial role in restoring this service, and leaving it in a better state than I found it, was the perfect way to start to cap off my time at the university (Yes, I built this as a Sophomore in college, not very many people can claim they have done something like that!).

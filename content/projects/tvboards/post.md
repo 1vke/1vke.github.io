@@ -3,9 +3,8 @@ title: "Digital Corps Office TV Boards"
 date: 2024-03-05
 draft: true
 ---
-# Digital Corps Office TV Boards
 
-![tv board](/portfolio/tvboards/thumbnail.jpg)
+![tv board](/projects/tvboards/thumbnail.jpg)
 
 At my previous role at the Digital Corps, two large TV screens served as the daily pulse of the team, displaying announcements, weather, and photos of our pets. But this system, built years ago, was starting to show its age. It was unreliable, and with the original developers long since graduated, it had become a bit of a mystery. My curiosity got the best of me, and I decided to take it on as a personal project to see if I could breathe new life into it.
 

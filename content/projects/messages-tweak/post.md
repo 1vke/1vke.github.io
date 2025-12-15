@@ -3,9 +3,8 @@ title: "iOS Messages Jailbreak Tweak"
 date: 2025-03-02
 draft: true
 ---
-# iOS Messages Jailbreak Tweak
 
-![ios messages tweak](/portfolio/messages-tweak/thumbnail.jpg)
+![ios messages tweak](/projects/messages-tweak/thumbnail.jpg)
 
 I developed an iOS jailbreak tweak that allows users to modify the colors of message balloons in the iOS Messages app. 
 This tweak was built using Theos, a cross-platform build system for jailbreak software development, and was written in 
