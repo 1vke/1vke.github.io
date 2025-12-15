@@ -12,7 +12,7 @@ I have a passion for understanding how things work, whether that’s building sc
 
 ## What I Do
 
-By day, I am a Mobile and Desktop Applications Software Engineer at **Sweetwater Sound**. I work primarily with **Swift** and **Kotlin** (and occasionally Objective-C) to build retail mobile applications and mobile or desktop internal tools that power the business.
+By day, I am a Mobile and Desktop Applications Software Engineer at [**Sweetwater**](https://share.google/Mn3tGTuYOzzNJw267). I work primarily with **Swift** and **Kotlin** (and occasionally Objective-C) to build retail mobile applications and mobile or desktop internal tools that power the business.
 
 Previously, I built web-based solutions for Ball State University mostly using the **AdonisJS** framework and **React**.
 

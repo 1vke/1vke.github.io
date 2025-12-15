@@ -1,41 +1,51 @@
 ---
-title: "Ball State Bus Tracker (in development)"
+title: "Ball State Bus Tracker"
 date: 2025-03-06
 draft: true
 ---
 
-The Bus Tracker widget for the MyBallState app is being developed to provide real-time bus tracking, ensuring students 
-and faculty can conveniently view bus locations. This project is designed to replace the previous TransLoc system with 
-an in-house solution.
+Waiting in the freezing Indiana winter for a bus that never shows up is a rite of passage for many Ball State students. When the previous tracking system, TransLoc, disappeared without notice, the campus was understandably upset and so was I. 
 
-The widget is built with Preact, a lightweight React framework that integrates seamlessly into the MyBallState app. 
-Preact was chosen over pure JavaScript for its maintainability and because our team has extensive experience with React.
-The widget also leverages MapLibre with OpenFreeMap, an open-source mapping solution that eliminates hosting costs. For 
-route mapping, we used OSRM (Open Source Routing Machine) to generate bus loop geometries based on bus stops. The loop 
-data is stored in GeoJSON format, a structured format widely used for mapping applications.
+I immediately started egging on my superiors at the Digital Corps, convinced that we had the talent to build a better, in-house solution. As it turned out, the university's Transportation Department came to us looking for answers amidst the student outrage. It became an official Digital Corps project, and I jumped at the chance to be the sole front-end developer. As a daily commuter myself, I was building this for me as much as for the thousands of other students left in the cold.
 
-One of the biggest challenges has been handling route visualization. Initially, we aimed to offset overlapping routes, 
-similar to subway maps. However, dynamically detecting and shifting overlapping sections proved complex. Instead, we 
-opted to allow route overlap while providing toggle buttons for individual visibility. Another challenge has been 
-animating bus markers smoothly. I implemented transitions using requestAnimationFrame to interpolate between position 
-updates, ensuring smooth movement and preventing abrupt jumps.
+## The Tech Stack
 
-The project has required extensive research into digital cartography and mapping best practices. I have explored various
-mapping libraries, evaluated data sources, and studied map tile types, zoom levels, and vector versus raster tiles. This
-research ensures we select the best tools for the job and build a reliable system.
+We needed a solution that was lightweight, maintainable, and cost-effective.
 
-Once completed, this project will significantly improve campus transportation usability. Reliable tracking will reduce 
-uncertainty, making bus usage more efficient for students and faculty. The removal of TransLoc left many commuters 
-struggling, and this widget aims to restore essential functionality. Personally, as a former dorm resident and now an 
-off-campus commuter, I understand the necessity of real-time bus tracking. Waiting in the cold or missing a bus due to a
-lack of information is frustrating, and this solution seeks to mitigate those issues.
+*   **Preact:** I chose Preact for its tiny footprint. It integrates seamlessly into the existing app while allowing us to use the React ecosystem our team is already comfortable with.
+*   **MapLibre & Protomaps:** To avoid the high costs of commercial mapping APIs, we leveraged Protomaps with MapLibre. We host a specific PMTiles archive of the campus area on an AWS S3 bucket, giving us a robust, self-contained vector mapping solution.
+*   **Data Pipeline:** We used the Open Source Routing Machine (OSRM) to generate precise route geometries from our bus stops, storing everything in GeoJSON for easy consumption.
 
-I have played a key role in this project as the sole front-end developer. I have led the front-end reseavrch, development,
-and implementation of the widget, collaborating with the UX and design team on the designs and backend developers to 
-integrate tracking functionalities. Ensuring feature parity with previous systems has been a top priority. This project 
-is not just a one-time solution; it is expected to continue evolving, potentially leading to a native mobile app in the 
-future.
+## Engineering Challenges
 
-Being part of a project that directly impacts the daily lives of students and faculty has been incredibly rewarding. Not 
-a day goes by when I don’t hear someone wishing for a bus tracker. Knowing that I am playing a crucial role in making it 
-happen is a fulfilling experience, and I look forward to seeing how this project grows.
+### **The "Subway Map" Problem**  
+One of our biggest hurdles was visualizing overlapping routes. We initially aimed for a dynamic "subway style" map where lines would automatically offset to avoid clutter. However, detecting and shifting overlapping sections dynamically proved to be an incredibly complex algorithmic challenge. We pivoted to a more user-centric approach: allowing users to toggle individual routes on and off. This keeps the interface clean while giving users control over what they see, while giving the developers a better development experience
+
+### **Choosing the Right Map Stack**
+Selecting the right mapping interface was critical. While Google Maps was the precedent set by TransLoc, its pricing model was prohibitive for our budget. I needed a solution that was cost-effective without sacrificing performance. I evaluated several options, including AWS Location Service, Leaflet, and OpenFreeMap. Ultimately, I settled on **MapLibre** paired with **Protomaps**. This combination offered the perfect balance of vector-based performance and self-hosted control, allowing us to deliver a high-quality map without the recurring costs of a commercial provider.
+
+### **Generating Accurate Routes**
+Early in development, our bus routes were simple straight lines connecting stops. They looked unnatural and ignored the actual road geometry. I quickly realized that manually drawing GeoJSON paths was not scalable or maintainable for the administrators. I needed a way to snap these paths to the road network automatically. I discovered **OSRM (Open Source Routing Machine)**, which allowed me to feed in a list of bus stops and receive a precise, road-aligned GeoJSON route in return. This turned a tedious manual task into an automated, accurate pipeline.
+
+### **Navigating Platform Constraints**
+The tracker lives as a widget inside an iFrame within the MyBallState app (powered by Pathify). This presented significant integration challenges. We had no direct control over the host environment, meaning any issues with the parent app had to be relayed to the vendor, often with slow turnaround times. For instance, while we wanted to show the user's location on the map, the geolocation API was unreliable within the mobile app's web view. Additionally, the widget had to function within a constrained, nearly square aspect ratio on mobile devices, despite available screen real estate. We had to be clever with our responsive design, ensuring the UI remained usable and uncrowded regardless of the arbitrary container dimensions.
+
+### **Delivering Under Pressure**
+Despite its importance to students, the project initially faced resource constraints due to competing business needs. However, the deadline was immovable for me personally. I was set to leave for an internship at Sweetwater Sound and wanted to leave behind a polished, finished product. In less than three months, working only a few hours a week, our small team delivered a robust solution. The pressure to finish before my departure drove me to ensure the code was clean, documented, and ready for the next generation of Digital Corps developers (I hope I did ok!!!).
+
+### **Smoothing the Jitter**  
+Our GPS data isn't realtime, it jumps between locations. A bus shouldn't teleport across the map. To solve this, I implemented a custom animation system using `requestAnimationFrame`. This allows the application to interpolate the bus's position between updates, creating smooth, realistic movement rather than abrupt jumps.
+
+## My Role
+
+As the **sole front-end developer**, I owned the implementation from research to code. I spent weeks diving into digital cartography, studying vector tiles, zoom levels, and coordinate systems, to ensure we built something reliable. I worked closely with our UX designers to translate their vision into code and collaborated with the sole backend engineer to ensure our data feed was robust.
+
+## Impact
+
+Reflecting on this now, eight months after leaving the Digital Corps, this project stands out as one of my proudest contributions. It is a daily utility for the community I was a part of, with a large amount of students using it every day. The launch triggered a snowball effect that continued long after I handed off the repository:
+
+1.  **Continued Investment:** The Digital Corps has continued to iterate on the tracker, building robust administration tools and adding new features to improve the student experience.
+2.  **New Opportunities:** The success of this in-house solution impressed the university administration, solidifying the Corps' reputation for tackling high-impact, technical challenges.
+3.  **Real-World Difference:** Even now, I still hear how the bus tracker helps students get to class on time or avoid a long wait in the rain.
+
+There’s a unique satisfaction in building the tool you wish you had. Knowing that I played a crucial role in restoring this service, and leaving it in a better state than I found it, was the perfect way to cap off my time at the university.
