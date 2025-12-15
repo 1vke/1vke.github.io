@@ -1,7 +1,7 @@
 ---
 title: "Inventory Management System"
 date: 2025-03-01
-draft: false
+draft: true
 ---
 # Inventory Management System
 

@@ -1,19 +1,33 @@
 +++
-title = "About Me"
+title = "About"
 menu = "main"
 weight = 1
 +++
 
 # Hello, I'm Lucas 👋
-Based in Muncie, Indiana, I'm currently pursuing a Bachelor's degree in Computer Science at Ball State University. During the day, I apply my software development skills at work, building solutions for real-world problems. By night, I dive into personal projects, always looking for ways to refine my craft and create something useful.
 
-Lately, I’ve been into offensive cybersecurity, game console modding, video games, and taking old or broken tech and giving it a second life. Outside of technology, I enjoy skateboarding and getting outdoors whenever the weather allows.
+I am a software engineer and Computer Science student at Ball State University, based in Muncie, Indiana. 
 
-# Skills & Experience
-I'm currently a Mobile and Desktop Applications Software Engineer at Sweetwater Sound, where I contribute to the Sweetwater retail applications (iOS and Android) and various internal iOS and macOS applications.
+I have a passion for understanding how things work, whether that’s building scalable applications, modding game consoles, or diving into the nuances of offensive cybersecurity. I love the process of taking complex systems, breaking them down, and refining them into something better.
 
-Previously, I worked as a Software Developer at Ball State University, building software solutions for the university. Across my roles, I've developed a passion for development methodologies like Agile and Extreme Programming.
+## What I Do
 
-My primary tools for work are Swift and Kotlin, with some Objective-C. I also have extensive experience with JavaScript, TypeScript, HTML/CSS, and Python, and I've worked with frameworks such as React, AdonisJS, and WordPress. Additionally, I’m familiar with Java and PHP. I’m always looking for the right project to dive into C++ and C as I haven't had much experience with those languages.
+By day, I am a Mobile and Desktop Applications Software Engineer at **Sweetwater Sound**. I work primarily with **Swift** and **Kotlin** (and occasionally Objective-C) to build retail mobile applications and mobile or desktop internal tools that power the business.
 
-I also have a interest in cybersecurity, particularly offensive security. While my experience in this area has mostly been through personal projects and some work-related opportunities, I’d love to explore it further. For now, I’m focused on software development but could see myself pursuing offensive security research in the future.
+Previously, I built web-based solutions for Ball State University mostly using the **AdonisJS** framework and **React**.
+
+While I am comfortable with a wide stack, including Python, TypeScript, and Java, I am looking for non-work related opportunities to dive deeper into low-level languages like **C** and **C++**.
+
+## Beyond the Code
+
+When I’m not in a text editor, I am likely tinkering with hardware. I enjoy taking tech and giving it a second life through repair and modding. This hands-on curiosity feeds into my interest in cybersecurity; I am constantly exploring offensive security research to understand vulnerabilities from the inside out.
+
+Outside of technology completely, you can find me skateboarding or exploring the outdoors.
+
+## Get in Touch
+
+I am always open to discussing software, security, or just general tech stuff. I am not currently looking for a job right now.
+
+* **Email**: [{{< param "email" >}}](mailto:{{< param "email" >}})
+* **LinkedIn**: [{{< param "linkedin" >}}]({{< param "linkedin" >}})
+* **GitHub**: [{{< param "github" >}}]({{< param "github" >}})
