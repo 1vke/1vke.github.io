@@ -64,3 +64,8 @@ ignoreErrors = ["error-disable-taxonomy"]
     lineNos = true
     lineNumbersInTable = false
     codeFences = true
+
+[[menu.main]]
+  name = "Resume"
+  url = "/resume/"
+  weight = 200
