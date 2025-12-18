@@ -68,6 +68,16 @@ ignoreErrors = ["error-disable-taxonomy"]
     unsafe = true
 
 [[menu.main]]
+  name = "About"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"
+  weight = 20
+
+[[menu.main]]
   name = "Resume"
   url = "/resume/"
-  weight = 200
+  weight = 30
