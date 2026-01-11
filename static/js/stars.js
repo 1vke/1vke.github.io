@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	function generateShadows(n) {
 		let shadows = [];
 		for (let i = 0; i < n; i++) {
-			shadows.push(`${Math.floor(rand() * 100)}vw ${Math.floor(rand() * 200)}vh #ffffff7a`);
+			shadows.push(`${Math.floor(rand() * 100)}dvw ${Math.floor(rand() * 200)}dvh var(--star-color)`);
 		}
 		return shadows.join(', ');
 	}
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			
 			const after = document.createElement('div');
 			after.style.position = 'absolute';
-			after.style.top = '200vh';
+			after.style.top = '200dvh';
 			after.style.width = `${config.size}px`;
 			after.style.height = `${config.size}px`;
-			after.style.background = 'transparent';
+			after.style.background = 'var(--star-color)';
 			after.style.boxShadow = shadows;
 			starDiv.appendChild(after);
 		}
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			if (starDiv) {
 				const cycle = config.duration * 1000;
 				const progress = (now % cycle) / cycle;
-				const translateY = -200 * progress; // 200vh
-				starDiv.style.transform = `translateY(${translateY}vh)`;
+				const translateY = -200 * progress; // 200dvh
+				starDiv.style.transform = `translateY(${translateY}dvh)`;
 			}
 		});
 		requestAnimationFrame(animateStars);
