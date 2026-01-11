@@ -24,9 +24,11 @@
 </head>
 
 <body>
-  <div id="stars"></div>
-  <div id="stars2"></div>
-  <div id="stars3"></div>
+  <div id="star-container" class="DO_NOT_OPEN_VERY_LAGGY">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </div>
   <header>
     {{- partial "header.html" . -}}
   </header>
@@ -41,7 +43,6 @@
   Simply place a custom_body.html into
   your local /layouts/partials-directory -->
   {{- partial "custom_body.html" . -}}
-  <script src="/js/stars.js"></script>
 </body>
 
 </html>

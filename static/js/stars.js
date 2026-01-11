@@ -1,3 +1,5 @@
+// inspired by https://codepen.io/sarazond/pen/LYGbwj
+
 document.addEventListener("DOMContentLoaded", function() {
 	const starConfig = [
 		{ id: 'stars', size: 1, desktopCount: 700, mobileCount: 200, duration: 50 },
