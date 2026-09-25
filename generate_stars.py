@@ -1,29 +1,40 @@
 #!/usr/bin/env python3
 """
-Generates the star field for the website as an inline SVG (Hugo partial).
+Generates the star field for the website (Hugo partial + background images).
 
-Replaces the old box-shadow + requestAnimationFrame approach
-(static/js/stars.js, RIP) with the same pattern-tiled SMIL animation used
-by the GitHub profile README:
+History, for future me:
+  v1 (stars.js, RIP): ~1000 box-shadow "stars" (squares!) animated by a
+     requestAnimationFrame loop. Laggy, and box-shadows are square.
+  v2 (pattern SVG + SMIL): round stars, zero JS, but Firefox runs SMIL
+     on the main thread AND re-rasterizes pattern content every frame
+     when opacity animates inside it — slower than v1 there. SMIL's clock
+     also pauses on hidden tabs, so stars jumped when switching tabs.
+  v3 (this): each star layer is a plain <div> with a tiny static SVG as
+     a repeating background. Drift = CSS transform animation, twinkle =
+     CSS opacity animation. Both run on the compositor in every browser
+     (Firefox included) and follow wall-clock time, so they stay in sync
+     across tab switches like the old Date.now() approach. The seamless
+     loop is free: translating by exactly one tile-height repeats the
+     background perfectly.
 
-- Stars are real circles (box-shadows are squares)
-- Zero JavaScript — no rAF loop, nothing to lag the profiler
-- The drift loop is free: patterns tile infinitely, so no duplicated
-  star markup and it fills any viewport size
-- Fills inherit --star-color from custom_style.html, so light/dark
-  theming keeps working exactly as before
-- Twinkles: stars fade in groups sharing one <animate> each (random
-  membership + random phase/duration keeps it looking organic)
+Twinkles: stars fade in groups — each group is its own div sharing one
+CSS animation (random membership + random phase/duration keeps it organic).
 
-Output: layouts/partials/stars.html
+Output:
+  layouts/partials/stars.html     (the divs + a <style> block)
+  static/img/stars/l{layer}g{group}-{theme}.svg
+
 Regenerate with: python3 generate_stars.py
 """
 
 import os
 
-TW, TH = 480, 600        # pattern tile (px): userSpaceOnUse units
+BASE = os.path.dirname(os.path.abspath(__file__))
+STATIC = os.path.join(BASE, "static", "img", "stars")
+PARTIAL = os.path.join(BASE, "layouts", "partials", "stars.html")
+
+TW, TH = 480, 600        # background tile (px)
 SEED = 42069             # same seed as the old stars.js, lol
-OUT = os.path.join(os.path.dirname(__file__), "layouts", "partials", "stars.html")
 
 # (base radius, star count per tile, drift duration in seconds)
 # Counts keep the old site's 7:2:1 layer ratio (700/200/100).
@@ -33,7 +44,13 @@ LAYERS = [
     (1.8, 11, 150),
 ]
 
-TWINKLE_GROUPS = 6  # fade groups per layer; more = more organic, more markup
+TWINKLE_GROUPS = 4  # fade groups per layer; more = more organic, more divs
+
+# Same colors the old --star-color CSS var held, baked into the SVGs.
+THEMES = {
+    "light": "#0000007a",
+    "dark": "#ffffff7a",
+}
 
 
 # LCG stands for "Linear Congruential Generator". ✨ The more you know ✨
@@ -44,68 +61,74 @@ def lcg(seed):
         yield state / 2147483648
 
 
-def make_partial():
+def make():
     gen = lcg(SEED)
     rnd = lambda: next(gen)
-    patterns = []
 
+    # First pass: assign stars to twinkle groups (same random stream for
+    # every theme, so light and dark tiles match exactly).
+    layer_groups = []
     for base_r, count, drift in LAYERS:
-        # Split this layer's stars into twinkle groups. Each group gets
-        # ONE shared fade animation; stars are assigned randomly so the
-        # groups aren't spatially clumped.
         groups = [[] for _ in range(TWINKLE_GROUPS)]
         for _ in range(count):
             groups[int(rnd() * TWINKLE_GROUPS)].append(
                 f'<circle cx="{rnd() * TW:.0f}" cy="{rnd() * TH:.0f}" '
                 f'r="{base_r * (0.75 + rnd() * 0.5):.1f}"/>'
             )
-
-        group_markup = ""
+        rendered = []
         for stars in groups:
             if not stars:
                 continue
-            dur = 2 + rnd() * 4
-            begin = -rnd() * dur
+            dur = 3 + rnd() * 5        # twinkle cycle
+            delay = -rnd() * dur       # negative delay = phase offset
             o_min = 0.08 + rnd() * 0.17
-            # Peak is 1.0 because --star-color already carries its own
-            # alpha (#0000007a / #ffffff7a), matching the old look.
-            group_markup += (
-                f'<g opacity="{o_min:.2f}">'
-                f'<animate attributeName="opacity" values="{o_min:.2f};1;{o_min:.2f}" '
-                f'dur="{dur:.1f}s" begin="{begin:.1f}s" repeatCount="indefinite"/>'
-                + "".join(stars) + '</g>'
+            rendered.append(("".join(stars), dur, delay, o_min))
+        layer_groups.append((drift, rendered))
+
+    os.makedirs(STATIC, exist_ok=True)
+
+    rules_light, rules_dark, divs = [], [], []
+    for li, (drift, groups) in enumerate(layer_groups):
+        for gi, (stars, dur, delay, o_min) in enumerate(groups):
+            key = f"l{li}g{gi}"
+            for theme, fill in THEMES.items():
+                with open(os.path.join(STATIC, f"{key}-{theme}.svg"), "w") as f:
+                    f.write(
+                        f'<svg xmlns="http://www.w3.org/2000/svg" width="{TW}" height="{TH}" '
+                        f'viewBox="0 0 {TW} {TH}" fill="{fill}">' + stars + '</svg>\n'
+                    )
+            rules_light.append(f'.sk-{key}{{background-image:url(/img/stars/{key}-light.svg)}}')
+            rules_dark.append(f'.sk-{key}{{background-image:url(/img/stars/{key}-dark.svg)}}')
+            # Two animations on one element: sk-drift moves the div up by
+            # exactly one tile (seamless loop), sk-tk fades it in/out.
+            divs.append(
+                f'<div class="sk sk-{key}" style="animation:sk-drift {drift}s linear infinite,'
+                f'sk-tk {dur:.1f}s ease-in-out {delay:.1f}s infinite;--sk-min:{o_min:.2f}"></div>'
             )
 
-        patterns.append(group_markup)
-
-    defs = "".join(
-        f'<pattern id="stars-{i}" width="{TW}" height="{TH}" patternUnits="userSpaceOnUse">'
-        + p + '</pattern>'
-        for i, p in enumerate(patterns)
+    # Each div is oversized (top -200%, height 500%) so it still covers
+    # the viewport at the far end of its -TH travel, on any screen size.
+    style = (
+        "/* Generated by generate_stars.py — do not edit by hand */\n"
+        "#star-container .sk{position:absolute;left:0;top:-200%;width:100%;height:500%;"
+        f"background-repeat:repeat;background-size:{TW}px {TH}px;will-change:transform,opacity;}}\n"
+        f"@keyframes sk-drift{{to{{transform:translateY(-{TH}px)}}}}\n"
+        "@keyframes sk-tk{0%,100%{opacity:var(--sk-min,.15)}50%{opacity:1}}\n"
+        + "\n".join(rules_light) + "\n"
+        + "@media (prefers-color-scheme: dark){\n" + "\n".join(rules_dark) + "\n}\n"
     )
 
-    # One rect per layer, painted with that layer's pattern. Each rect is
-    # tall enough that translating it up by one tile-height (the pattern
-    # period) loops seamlessly while always covering the viewport.
-    rects = "".join(
-        f'<rect x="0" y="-{TH}" width="100%" height="500%" fill="url(#stars-{i})">'
-        f'<animateTransform attributeName="transform" type="translate" '
-        f'from="0 0" to="0 -{TH}" dur="{LAYERS[i][2]}s" repeatCount="indefinite"/></rect>'
-        for i in range(len(LAYERS))
-    )
-
-    # No viewBox: user units are CSS pixels, so the pattern tiles in real
-    # screen space and fills any viewport. fill on the root is inherited
-    # by every circle; rects override it with their pattern.
+    n_svgs = sum(len(g) for _, g in layer_groups) * len(THEMES)
     return (
-        '<svg id="star-container" class="DO_NOT_OPEN_VERY_LAGGY" '
-        'xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" '
-        'fill="var(--star-color)" aria-hidden="true">\n'
-        f'<defs>{defs}</defs>\n{rects}\n</svg>\n'
-    )
+        '<div id="star-container" class="DO_NOT_OPEN_VERY_LAGGY" aria-hidden="true">\n'
+        '<style>\n' + style + '</style>\n' + "\n".join(divs) + '\n</div>\n'
+    ), n_svgs
 
 
 if __name__ == "__main__":
-    with open(OUT, "w") as f:
-        f.write(make_partial())
-    print(f"wrote {OUT} ({os.path.getsize(OUT)} bytes)")
+    partial, n_svgs = make()
+    with open(PARTIAL, "w") as f:
+        f.write(partial)
+    n_divs = partial.count('<div class="sk')
+    print(f"wrote {PARTIAL} ({os.path.getsize(PARTIAL)} bytes, {n_divs} star divs)")
+    print(f"wrote {n_svgs} tile SVGs to {STATIC}")
