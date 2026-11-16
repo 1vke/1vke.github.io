@@ -124,6 +124,11 @@ content {
   max-width: var(--measure);
 }
 
+/* project posts span the full page container */
+content.post-wide {
+  max-width: none;
+}
+
 ::selection {
   background: var(--selection);
 }

@@ -5,7 +5,8 @@
   <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>
 </p>
 {{ end }}
-<content>
+{{ $wide := eq .Section "projects" }}
+<content {{ if $wide }}class="post-wide"{{ end }}>
   {{ .Content }}
 </content>
 {{ with .GetTerms "tags" }}
