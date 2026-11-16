@@ -57,12 +57,12 @@ enableRobotsTXT = true
 
 [[menu.main]]
   name = "Projects"
-  url = "/#projects"
+  url = "/projects/"
   weight = 10
 
 [[menu.main]]
   name = "Blog"
-  url = "/#blog"
+  url = "/blog/"
   weight = 20
 
 [[menu.main]]
