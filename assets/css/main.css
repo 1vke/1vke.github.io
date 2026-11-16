@@ -343,6 +343,28 @@ footer {
   margin-block: var(--space-7);
 }
 
+/* intro: headshot beside the pitch */
+
+.home-intro {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-6);
+}
+
+.home-intro .headshot {
+  width: 12rem;
+  aspect-ratio: 1 / 1;
+  align-self: start;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: var(--hairline) solid var(--rule);
+  display: block;
+}
+
+.home-intro .home-intro-body {
+  min-width: 0;
+}
+
 .home-intro .role {
   font-family: var(--font-mono);
   font-size: var(--step--2);
@@ -551,4 +573,16 @@ footer {
   display: flex;
   justify-content: space-between;
   margin-top: var(--space-5);
+}
+
+@media (max-width: 48rem) {
+  .home-intro {
+    gap: var(--space-4);
+  }
+
+  .home-intro .headshot {
+    width: 6rem;
+    height: 6rem;
+    align-self: start;
+  }
 }
