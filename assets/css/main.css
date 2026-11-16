@@ -824,8 +824,8 @@ footer {
   color: var(--accent);
 }
 
-/* mobile: stack the hero like a profile card — photo on top, then
-   name, pitch, and icons below, all left-aligned with the page */
+/* mobile: hide the headshot; the greeting, pitch, and icons run
+   full-width, left-aligned with the page */
 
 @media (max-width: 48rem) {
   .home-intro {
@@ -834,13 +834,6 @@ footer {
   }
 
   .home-intro .headshot {
-    width: 9rem;
-    height: auto;
-  }
-}
-
-@media (max-width: 30rem) {
-  .home-intro .headshot {
-    width: 7rem;
+    display: none;
   }
 }
