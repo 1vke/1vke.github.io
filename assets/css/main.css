@@ -190,26 +190,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-3) var(--space-5);
-  padding-block: var(--space-5);
+  padding-block: var(--space-3);
   border-bottom: var(--hairline) solid var(--rule);
-}
-
-header .title {
-  text-decoration: none;
-  margin-right: auto;
-}
-
-header .title h2 {
-  font-size: var(--step-2);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  margin: 0;
-  transition: color 0.2s ease;
-}
-
-header .title:hover h2 {
-  color: var(--accent);
 }
 
 nav {

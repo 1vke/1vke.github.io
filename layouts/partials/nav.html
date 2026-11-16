@@ -3,5 +3,8 @@
 {{ if and (not $.IsHome) (or (eq .URL $.RelPermalink) (and (eq .Name "Blog") (eq $.Section "blog")) (and (eq .Name "Projects") (eq $.Section "projects"))) }}
 {{ $current = true }}
 {{ end }}
+{{ if and (eq .URL "/") $.IsHome }}
+{{ $current = true }}
+{{ end }}
 <a href="{{ .URL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a>
 {{ end }}
