@@ -844,6 +844,11 @@ footer {
    full-width, left-aligned with the page */
 
 @media (max-width: 48rem) {
+  /* with the headshot hidden, the sections stack tighter */
+  .home-section {
+    margin-block: var(--space-5);
+  }
+
   .home-intro {
     grid-template-columns: 1fr;
     gap: var(--space-5);
