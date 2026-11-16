@@ -5,7 +5,6 @@ baseURL = "https://lucaslowe.com"
 # Basic metadata configuration for your blog.
 title = "lucaslowe.com"
 author = "Lucas Lowe"
-copyright = "Copyright © 2025, Lucas Lowe."
 languageCode = "en-US"
 
 # Generate a nice robots.txt for SEO
@@ -17,10 +16,9 @@ enableRobotsTXT = true
 
 [params]
   # The "description" of your website. This is used in the meta data of your generated html.
-  description = "Hugo + Bear = :heart:"
+  description = "Lucas Lowe — software engineer at Sweetwater and Computer Science student at Ball State. Projects, write-ups, and security research."
 
   # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
-  # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
   favicon = "images/favicon.png"
 
   # These "images" are used for the structured data templates. This will show up, when
@@ -32,7 +30,7 @@ enableRobotsTXT = true
   # Another "title" :-). This one is used as the site_name on the Hugo's internal
   # opengraph structured data template.
   # See https://ogp.me/ and https://gohugo.io/templates/internal#open-graph.
-  title = "Hugo ʕ•ᴥ•ʔ Bear"
+  title = "Lucas Lowe"
 
   # By default, dates are displayed with a format like "02 Jan, 2006", but
   # you can customize it by setting the `dateFormat` param in your site's config
