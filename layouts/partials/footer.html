@@ -1,5 +1,6 @@
 <nav class="footer-links" aria-label="Site">
   {{ with .Site.Params.email }}<a href="mailto:{{ . }}">Email</a>{{ end }}
+  {{ with .Site.Params.linkedin }}<a href="{{ . }}" rel="me noopener">LinkedIn</a>{{ end }}
   {{ with .Site.Params.github }}<a href="{{ . }}" rel="me noopener">GitHub</a>{{ end }}
   <a href='{{ "blog/index.xml" | relURL }}'>RSS</a>
 </nav>
