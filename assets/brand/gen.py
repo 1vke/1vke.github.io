@@ -29,11 +29,4 @@ d.rounded_rectangle((540, 424, 660, 428), radius=2, fill=ACCENT)
 d.text((600, 555), "lucaslowe.com", font=ImageFont.truetype(MENLO, 26), fill=MUTED, anchor="mm")
 share.save("static/images/share.png", optimize=True)
 
-# ---- favicon.png: 512x512, rounded square with alpha -----------------
-fav = Image.new("RGBA", (512, 512), (0, 0, 0, 0))
-d = ImageDraw.Draw(fav)
-d.rounded_rectangle((0, 0, 511, 511), radius=96, fill=BG + (255,))
-d.text((256, 262), "LL", font=ImageFont.truetype(ARIAL_BOLD, 230), fill=ACCENT + (255,), anchor="mm")
-fav.save("static/images/favicon.png", optimize=True)
-
 print("written")
