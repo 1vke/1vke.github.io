@@ -9,7 +9,7 @@
   --bg-raised: #1b1a21;
   --text: #d8d6de;
   --text-muted: #a09eab;
-  --text-subtle: #7d7b88;
+  --text-subtle: #8a8896;
   --accent: #a486fc;
   --rule: #26242e;
   --rule-strong: #3a3844;
@@ -233,6 +233,36 @@ nav a:last-child {
 
 nav a:hover {
   color: var(--text);
+}
+
+nav a[aria-current="page"] {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+/* skip-to-content: hidden until keyboard-focused */
+
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 10;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-raised);
+  border: var(--hairline) solid var(--rule-strong);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
 
 /* ------------------------------------------------------------------ dates */

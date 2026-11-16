@@ -24,11 +24,12 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <div id="wrap">
     <header>
       {{- partial "header.html" . -}}
     </header>
-    <main>
+    <main id="main">
       {{- block "main" . }}{{- end }}
     </main>
     <footer>

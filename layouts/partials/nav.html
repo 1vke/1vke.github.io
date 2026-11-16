@@ -1,3 +1,7 @@
 {{ range .Site.Menus.main }}
-<a href="{{ .URL }}">{{ .Name }}</a>
+{{ $current := false }}
+{{ if and (not $.IsHome) (or (eq .URL $.RelPermalink) (and (eq .Name "Blog") (eq $.Section "blog"))) }}
+{{ $current = true }}
+{{ end }}
+<a href="{{ .URL }}"{{ if $current }} aria-current="page"{{ end }}>{{ .Name }}</a>
 {{ end }}
