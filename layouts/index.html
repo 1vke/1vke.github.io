@@ -4,7 +4,6 @@
   <img class="headshot" src="{{ .RelPermalink }}" alt="Portrait of Lucas Lowe" width="400" height="400">
   {{ end }}
   <div class="home-intro-body">
-    {{ with .Params.role }}<p class="role">{{ . }}</p>{{ end }}
     {{ .Content }}
     {{ partial "social.html" . }}
   </div>

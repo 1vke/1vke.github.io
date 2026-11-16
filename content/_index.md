@@ -1,6 +1,5 @@
 +++
 title = "Lucas Lowe"
-role = "Software Engineer · Mobile & Desktop @ Sweetwater · CS @ Ball State"
 weight = 1
 +++
 
