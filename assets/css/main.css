@@ -553,6 +553,10 @@ footer {
   max-width: var(--measure);
 }
 
+.home-intro h1 {
+  margin: 0 0 var(--space-4);
+}
+
 /* social icon row */
 
 .social {
