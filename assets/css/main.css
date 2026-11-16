@@ -17,6 +17,19 @@
   --selection: rgba(164, 134, 252, 0.30);
   --focus-ring: #a486fc;
 
+  /* code token colors */
+  --code-comment: #8a8896;
+  --code-keyword: #a486fc;
+  --code-string: #9fc98f;
+  --code-number: #e8b478;
+  --code-function: #89b4fa;
+  --code-type: #6fc7b6;
+  --code-tag: #a486fc;
+  --code-attr: #d6b98c;
+  --code-operator: #d8d6de;
+  --code-error: #f2777a;
+  --code-linenr: #5c5a68;
+
   /* layout */
   --page-width: 64rem;
   --measure: 70ch;
@@ -61,6 +74,19 @@
     --code-bg: #f1eff8;
     --selection: rgba(103, 58, 183, 0.20);
     --focus-ring: #673ab7;
+
+    /* code token colors */
+    --code-comment: #8a8896;
+    --code-keyword: #673ab7;
+    --code-string: #2e7d4f;
+    --code-number: #b45f06;
+    --code-function: #1565c0;
+    --code-type: #0f766e;
+    --code-tag: #673ab7;
+    --code-attr: #92600a;
+    --code-operator: #232028;
+    --code-error: #c0392b;
+    --code-linenr: #b8b5c2;
   }
 }
 
@@ -279,8 +305,98 @@ code {
   margin-block: var(--space-4);
 }
 
-div.highlight pre {
-  background-color: transparent !important;
+/* code highlighting — chroma token classes, token-driven for both themes */
+
+.chroma {
+  color: var(--text);
+}
+
+.chroma .c,
+.chroma .c1,
+.chroma .c2,
+.chroma .cm,
+.chroma .ch,
+.chroma .cs {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.chroma .k,
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .nt {
+  color: var(--code-keyword);
+}
+
+.chroma .kt,
+.chroma .nc,
+.chroma .nb {
+  color: var(--code-type);
+}
+
+.chroma .nf,
+.chroma .nx {
+  color: var(--code-function);
+}
+
+.chroma .na,
+.chroma .nd {
+  color: var(--code-attr);
+}
+
+.chroma .o,
+.chroma .ow {
+  color: var(--code-operator);
+}
+
+.chroma .s,
+.chroma .s1,
+.chroma .s2,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .sd,
+.chroma .se,
+.chroma .sh,
+.chroma .si,
+.chroma .sj,
+.chroma .sr,
+.chroma .ss,
+.chroma .sx,
+.chroma .dl {
+  color: var(--code-string);
+}
+
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .mo,
+.chroma .l,
+.chroma .ld {
+  color: var(--code-number);
+}
+
+.chroma .gd {
+  color: var(--code-error);
+}
+
+.chroma .gi {
+  color: var(--code-string);
+}
+
+.chroma .err {
+  color: var(--code-error);
+}
+
+.chroma .ln {
+  color: var(--code-linenr);
+  user-select: none;
+  margin-right: var(--space-2);
 }
 
 /* ------------------------------------------------------------------ prose */
@@ -352,7 +468,7 @@ footer {
 }
 
 .home-intro .headshot {
-  width: 12rem;
+  width: 14.75rem;
   aspect-ratio: 1 / 1;
   align-self: start;
   object-fit: cover;

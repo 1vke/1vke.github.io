@@ -46,11 +46,9 @@ enableRobotsTXT = true
   linkedin = "https://linkedin.com/in/cs-lucaslowe"
   github = "https://github.com/1vke"
 
-# Configure markup highlighter to match "Bearblog" aesthetics, see 
-# https://gohugo.io/configuration/markup/#highlight
 [markup]
   [markup.highlight]
-    style = 'friendly'
+    noClasses = false
     lineNos = true
     lineNumbersInTable = false
     codeFences = true
