@@ -2,6 +2,9 @@
 title: "Ball State Bus Tracker Widget"
 date: 2025-12-06
 draft: false
+context: "Ball State Digital Corps · Sole front-end developer"
+summary: "A real-time campus bus tracker I built as sole front-end developer at Ball State's Digital Corps. Preact paired with MapLibre and self-hosted Protomaps replaced a costly commercial API, with OSRM-generated routes and a custom interpolation system to smooth out jumpy GPS data. It became a daily utility for thousands of students."
+tags: ["preact", "maplibre", "osrm"]
 ---
 
 {{< figure src="/projects/bsu-bus-tracker/thumbnail.jpg" alt="Lucas standing in front of a TV that is displaying a live advert of the Ball State Bus Tracker widget when it was first released to students in the beginning of the fall semester." caption="Me standing in front of a digital signage display promoting the new bus tracker launch. I was honestly so excited in this picture! Also, this was just a website, so the tracker was live and interactive, super cool. S/O Digital Corps!" >}}

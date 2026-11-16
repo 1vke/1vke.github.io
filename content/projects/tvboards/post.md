@@ -2,6 +2,9 @@
 title: "Digital Corps Office TV Boards"
 date: 2025-12-05
 draft: false
+context: "Ball State Digital Corps · Personal initiative"
+summary: "A ground-up rescue of the Digital Corps office signage kiosks: migrating the web app from Create React App to Vite and TypeScript, replacing the unstable Windows install with Linux, and overhauling thermally failing hardware. A full-stack, app-to-heat-sink modernization taken on out of pure curiosity."
+tags: ["react", "typescript", "linux"]
 ---
 
 {{< figure src="/projects/tvboards/thumbnail.jpg" alt="Digital Corps Office TV Board displaying team photos and announcements" caption="One of the two digital signage displays in the Digital Corps office." >}}
