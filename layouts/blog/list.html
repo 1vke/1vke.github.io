@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+<h1 class="section-title">{{ .Title }}</h1>
 {{ .Content }}
 {{ $pag := .Paginate .Pages 10 }}
 {{ range $pag.Pages }}

@@ -2,19 +2,15 @@
 {{ if not .Params.menu }}
 <h1 class="post-title">{{ .Title }}</h1>
 <p class="post-date">
-  <i>
-    <time datetime='{{ .Date.Format "2006-01-02" }}'>
-      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
-    </time>
-  </i>
+  <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>
 </p>
 {{ end }}
 <content>
   {{ .Content }}
 </content>
-<p>
-  {{ range (.GetTerms "tags") }}
-  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
-  {{ end }}
-</p>
+{{ with .GetTerms "tags" }}
+<div class="post-tags">
+  {{ range . }}<a class="tag" href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
+</div>
+{{ end }}
 {{ end }}

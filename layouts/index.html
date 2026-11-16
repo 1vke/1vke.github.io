@@ -11,33 +11,17 @@
 </section>
 
 <section id="projects" class="home-section" aria-labelledby="projects-title">
-  <h2 id="projects-title">Projects</h2>
+  <h2 id="projects-title" class="section-title">Projects</h2>
   {{ $projects := .Site.GetPage "/projects" }}
   <div class="card-grid">
-    {{ range $p := $projects.Pages.ByDate.Reverse }}
-    <article class="card">
-      <a class="card-link" href="{{ $p.RelPermalink }}">
-        {{ with $p.Resources.GetMatch "thumbnail.*" }}
-        <img class="card-media" src="{{ .RelPermalink }}" alt="" loading="lazy">
-        {{ end }}
-        <div class="card-body">
-          <h3 class="card-title">{{ $p.Title }}</h3>
-          {{ with $p.Params.context }}<p class="card-context">{{ . }}</p>{{ end }}
-          <p class="card-summary">{{ $p.Summary | plainify }}</p>
-        </div>
-      </a>
-      {{ with $p.GetTerms "tags" }}
-      <div class="card-tags">
-        {{ range . }}<a class="tag" href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
-      </div>
-      {{ end }}
-    </article>
+    {{ range $projects.Pages.ByDate.Reverse }}
+    {{ partial "project-card.html" . }}
     {{ end }}
   </div>
 </section>
 
 <section id="blog" class="home-section" aria-labelledby="blog-title">
-  <h2 id="blog-title">Blog</h2>
+  <h2 id="blog-title" class="section-title">Blog</h2>
   {{ $blog := .Site.GetPage "/blog" }}
   {{ with $blog.Pages }}
   <div class="post-list">

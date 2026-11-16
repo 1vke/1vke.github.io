@@ -1,6 +1,15 @@
 {{ define "title" }}404{{ end }}
 
 {{ define "main" }}
-<h1>404</h1>
-<p>This page does not exist. <a href="{{ "" | relURL }}">Back home</a></p>
+<div class="not-found">
+  <p class="not-found-code">404</p>
+  <h1>Page not found</h1>
+  <p>Sorry — that page doesn't exist or has moved.</p>
+  <nav class="not-found-links" aria-label="Not found links">
+    <a href="/#about">About</a>
+    <a href="/#projects">Projects</a>
+    <a href="/#blog">Blog</a>
+    <a href="/resume/">Resume</a>
+  </nav>
+</div>
 {{ end }}
