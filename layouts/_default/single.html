@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ if not .Params.menu }}
+{{ if and (not .Params.menu) (not .Params.hideMeta) }}
 <h1 class="post-title">{{ .Title }}</h1>
 <p class="post-date">
   <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}</time>
