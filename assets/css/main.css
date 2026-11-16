@@ -824,14 +824,23 @@ footer {
   color: var(--accent);
 }
 
+/* mobile: stack the hero like a profile card — photo on top, then
+   name, pitch, and icons below, all left-aligned with the page */
+
 @media (max-width: 48rem) {
   .home-intro {
-    gap: var(--space-4);
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
   }
 
   .home-intro .headshot {
-    width: 6rem;
-    height: 6rem;
-    align-self: start;
+    width: 9rem;
+    height: auto;
+  }
+}
+
+@media (max-width: 30rem) {
+  .home-intro .headshot {
+    width: 7rem;
   }
 }
