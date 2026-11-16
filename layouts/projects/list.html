@@ -3,7 +3,7 @@
 {{ .Content }}
 <div class="card-grid">
   {{ range .Pages.ByDate.Reverse }}
-  {{ partial "project-card.html" . }}
+  {{ partial "project-card.html" (dict "page" . "level" 2) }}
   {{ end }}
 </div>
 {{ end }}

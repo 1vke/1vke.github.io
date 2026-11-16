@@ -1,16 +1,19 @@
-{{/* Context: a project page */}}
+{{/* Context: a map with "page" (project page) and optional "level"
+       (heading rank for the card title, default 3). */}}
+{{ $page := .page }}
+{{ $level := .level | default 3 }}
 <article class="card">
-  <a class="card-link" href="{{ .RelPermalink }}">
-    {{ with .Resources.GetMatch "thumbnail.*" }}
+  <a class="card-link" href="{{ $page.RelPermalink }}">
+    {{ with $page.Resources.GetMatch "thumbnail.*" }}
     <img class="card-media" src="{{ .RelPermalink }}" alt="" loading="lazy">
     {{ end }}
     <div class="card-body">
-      <h3 class="card-title">{{ .Title }}</h3>
-      {{ with .Params.context }}<p class="card-context">{{ . }}</p>{{ end }}
-      <p class="card-summary">{{ .Summary | plainify }}</p>
+      <h{{ $level }} class="card-title">{{ $page.Title }}</h{{ $level }}>
+      {{ with $page.Params.context }}<p class="card-context">{{ . }}</p>{{ end }}
+      <p class="card-summary">{{ $page.Summary | plainify }}</p>
     </div>
   </a>
-  {{ with .GetTerms "tags" }}
+  {{ with $page.GetTerms "tags" }}
   <div class="card-tags">
     {{ range . }}<a class="tag" href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>{{ end }}
   </div>
