@@ -24,15 +24,17 @@
 </head>
 
 <body>
-  <header>
-    {{- partial "header.html" . -}}
-  </header>
-  <main>
-    {{- block "main" . }}{{- end }}
-  </main>
-  <footer>
-    {{- partial "footer.html" . -}}
-  </footer>
+  <div id="wrap">
+    <header>
+      {{- partial "header.html" . -}}
+    </header>
+    <main>
+      {{- block "main" . }}{{- end }}
+    </main>
+    <footer>
+      {{- partial "footer.html" . -}}
+    </footer>
+  </div>
 
   <!-- A partial to be overwritten by the user.
   Simply place a custom_body.html into
